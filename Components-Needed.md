@@ -5,7 +5,7 @@
 - Uses the **AWS provider**
 - Region set to **ap-south-1 (Mumbai)**
 
----
+
 
 ### 2️. VPC and Networking (`vpc.tf`)
 - Creates a **VPC** with CIDR block `10.0.0.0/16`
