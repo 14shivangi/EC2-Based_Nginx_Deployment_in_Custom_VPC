@@ -1,13 +1,13 @@
 
-## 🔧 Components Explained
+##  Components Explained
 
-### 1️⃣ Provider Configuration (`main.tf`)
+### 1. Provider Configuration (`main.tf`)
 - Uses the **AWS provider**
 - Region set to **ap-south-1 (Mumbai)**
 
 ---
 
-### 2️⃣ VPC and Networking (`vpc.tf`)
+### 2️. VPC and Networking (`vpc.tf`)
 - Creates a **VPC** with CIDR block `10.0.0.0/16`
 - **Public Subnet:** `10.0.2.0/24`
 - **Private Subnet:** `10.0.1.0/24`
@@ -18,17 +18,17 @@
 
 ---
 
-### 3️⃣ Security Group (`security-grp.tf`)
+### 3️. Security Group (`security-grp.tf`)
 Allows the following:
 - **HTTP (Port 80)** from anywhere
 - **SSH (Port 22)** from anywhere *(can be restricted to your IP)*
 - **All outbound traffic**
 
-➡️ This security group is attached to the **EC2 instance**.
+-> This security group is attached to the **EC2 instance**.
 
 ---
 
-### 4️⃣ EC2 Instance with NGINX (`ec2.tf`)
+### 4️. EC2 Instance with NGINX (`ec2.tf`)
 - EC2 instance type: **t2.micro**
 - AMI: **Amazon Linux (ap-south-1)**
 - Launched in the **public subnet**
@@ -37,7 +37,7 @@ Allows the following:
 
 ---
 
-### 5️⃣ Outputs (`output.tf`)
+### 5️. Outputs (`output.tf`)
 Displays:
 - **EC2 public IP address**
 - **NGINX access URL** (`http://<public-ip>`)
